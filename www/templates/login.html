@@ -1,25 +1,34 @@
-<ion-modal-view>
-  <ion-header-bar>
-    <h1 class="title">Login</h1>
-    <div class="buttons">
-      <button class="button button-clear" ng-click="closeLogin()">Close</button>
-    </div>
-  </ion-header-bar>
-  <ion-content>
-    <form ng-submit="doLogin()">
-      <div class="list">
-        <label class="item item-input">
-          <span class="input-label">Username</span>
-          <input type="text" ng-model="loginData.username">
-        </label>
-        <label class="item item-input">
-          <span class="input-label">Password</span>
-          <input type="password" ng-model="loginData.password">
-        </label>
-        <label class="item">
-          <button class="button button-block button-positive" type="submit">Log in</button>
-        </label>
+<ion-view view-title="Login" id="loginPage">
+  <ion-content class="padding">
+  	<center>
+  		<img src="data/img/logo.png"/>
+  	</center>
+  	<form>
+  	  <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
       </div>
-    </form>
+
+  	 <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate">
+          <label for="password">Mot de passe</label>
+        </div>
+     </div>
+
+      <div class='row'>
+        <button type="button" name='btn_login' class='col s12 btn btn-large waves-effect login-button' ng-click="SignIn($event)">Se connecter</button>
+      </div>
+  	</form>
+  	 <div class="row">
+	    <button type="button" name='btn_login' class='col s12 btn btn-large waves-effect login-button  pink accent-3' ng-click="signInGoogle()">Se connecter avec Google</button>
+	  </div>
+	  <center><a href="#/signup">Créer un compte</a></center>
+	 </div>
+
+
+
   </ion-content>
-</ion-modal-view>
+</ion-view>
