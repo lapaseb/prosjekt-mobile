@@ -1,11 +1,13 @@
 <ion-view view-title="Login" id="loginPage">
   <ion-content class="padding">
-  	<center>
+  	<div class="title">
   		<img src="data/img/logo.png"/>
-  	</center>
+  		<h1>Prosjekt</h1>
+  	</div>
+
   	<form>
   	  <div class="row">
-        <div class="input-field col s12">
+        <div class="input-field col">
           <input id="email" type="email" class="validate">
           <label for="email">Email</label>
         </div>
@@ -19,16 +21,15 @@
      </div>
 
       <div class='row'>
-        <button type="button" name='btn_login' class='col s12 btn btn-large waves-effect login-button' ng-click="SignIn($event)">Se connecter</button>
+        <button id="connect" type="button" name='btn_login' class='col s12 btn btn-large waves-effect login-button' ng-click="SignIn()">Se connecter</button>
       </div>
   	</form>
-  	 <div class="row">
-	    <button type="button" name='btn_login' class='col s12 btn btn-large waves-effect login-button  pink accent-3' ng-click="signInGoogle()">Se connecter avec Google</button>
-	  </div>
-	  <center><a href="#/signup">Créer un compte</a></center>
-	 </div>
 
+  	<div class="googleConnect">
+	  <img src="data/img/googleSignIn.png" ng-click="" />  
 
+	</center>
+	<center><a href="#">Créer un compte</a></center>
 
   </ion-content>
 </ion-view>
