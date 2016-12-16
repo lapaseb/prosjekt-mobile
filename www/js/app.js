@@ -6,7 +6,18 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $state, $rootScope, $firebase, $firebaseArray) {
+  // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCUXqWjNke7q57mx_PZb0YInZbfN-fs5K0",
+      authDomain: "prosjekt-12423.firebaseapp.com",
+      databaseURL: "https://prosjekt-12423.firebaseio.com",
+      storageBucket: "prosjekt-12423.appspot.com",
+      messagingSenderId: "1020673117185"
+    };
+    firebase.initializeApp(config);
+
+
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -19,6 +30,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+
+    $rootScope.SignOut = function() {
+      firebase.auth().signOut().then(function() {
+        $rootScope.$apply(function() {
+          $state.go("login");
+        });
+      }, function(error) {
+        console.log(error);
+      });
+    }
+
   });
 })
 
@@ -37,32 +59,25 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
     controller: 'AppCtrl'
   })
 
-  .state('app.search', {
-    url: '/search',
+  .state('app.projets', {
+    url: '/projets',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'templates/projets.html',
+        controller: 'ProjetsCtrl'
       }
     }
   })
 
-  .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html'
-        }
+  .state('app.playlists', {
+    url: '/playlists',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/playlists.html',
+        controller: 'PlaylistsCtrl'
       }
-    })
-    .state('app.playlists', {
-      url: '/playlists',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
-        }
-      }
-    })
+    }
+  })
 
   .state('app.single', {
     url: '/playlists/:playlistId',

@@ -8,25 +8,25 @@
   	<form>
   	  <div class="row">
         <div class="input-field col">
-          <input id="email" type="email" class="validate">
+          <input id="email" type="email" class="validate" ng-model="$user.email">
           <label for="email">Email</label>
         </div>
       </div>
 
   	 <div class="row">
         <div class="input-field col s12">
-          <input id="password" type="password" class="validate">
+          <input id="password" type="password" class="validate" ng-model="$user.password">
           <label for="password">Mot de passe</label>
         </div>
      </div>
 
       <div class='row'>
-        <button id="connect" type="button" name='btn_login' class='col s12 btn btn-large waves-effect login-button' ng-click="SignIn()">Se connecter</button>
+        <button id="connect" type="button" name='btn_login' class='col s12 btn btn-large waves-effect login-button' ng-click="SignIn($user)">Se connecter</button>
       </div>
   	</form>
 
   	<div class="googleConnect">
-	  <img src="data/img/googleSignIn.png" ng-click="" />  
+	  <img src="data/img/googleSignIn.png" ng-click="signInGoogle()" />  
 
 	</center>
 	<center><a href="#">Créer un compte</a></center>
