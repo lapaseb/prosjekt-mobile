@@ -1,7 +1,7 @@
 {
   "name": "prosjekt",
   "version": "1.1.1",
-  "description": "prosjekt: An Ionic project",
+  "description": "Prosjekt: Gestionnaire de projet",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",
