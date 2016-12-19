@@ -1,5 +1,23 @@
-<ion-view view-title="projets">
-  <ion-content>
-    <h1>Projets</h1>
+<ion-view view-title="Projets" id="projetsPage">
+  <ion-content class="padding">
+
+	<div class="card" ng-repeat="projet in projets">
+	  <div class="cardTitle">
+	  	<span>{{ projet.projetNom }}</span>
+	  </div>
+	  <div class="cardFav">
+	  	<i class="material-icons">favorite_border</i>
+	  </div>
+	
+	  <div class="cardContent">
+	  	<span>{{ projet.progression }}%</span>
+	    <div class="progress">
+	      <div class="determinate" ng-class="projet.progression <= 30 ? 'redBar' : ''" style="width:{{ projet.progression }}%"></div>
+	    </div>
+	  </div>
+	</div>
+
   </ion-content>
+
+  <a id="addButton" class="btn-floating btn-large waves-effect waves-light green" href="#/app/addProjet"><i class="material-icons">add</i></a>
 </ion-view>

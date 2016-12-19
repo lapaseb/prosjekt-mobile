@@ -1,0 +1,43 @@
+<ion-view view-title="Ajout d'un projet" id="addProjetPage">
+  <ion-content class="padding">
+	  <form>
+	  	  <div class="row">
+	        <div class="input-field col">
+	          <input id="name" type="text" class="validate" ng-model="$project.name">
+	          <label for="name">Nom du projet</label>
+	        </div>
+	      </div>
+
+	  	  <div class='row'>
+            <div class='input-field col s12'>
+              <textarea id="textarea1" class="materialize-textarea" ng-model="$project.description"></textarea>
+              <label for="textarea1">Description du projet</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class='input-field col s12 m6 l6'>
+              <input type="date" id="datedebut" ng-model="$project.dateDebut">
+            </div>
+            <div class='input-field col s12 m6 l6'>
+              <input type="date" id="datefin" ng-model="$project.dateFin">
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <select class="browser-default" ng-model="$project.importance">
+                <option value="" disabled selected>Sélectionnez une importance</option>
+                <option value="1">Faible</option>
+                <option value="2">Moyenne</option>
+                <option value="3">Elevée</option>
+              </select>
+            </div>
+          </div>
+
+
+	      <div class='row'>
+	        <button id="ajout" type="button" name='btn_ajout' class='col s12 btn btn-large waves-effect' ng-click="addProject($project)">Ajouter</button>
+	      </div>
+	  	</form>
+	
+  </ion-content>
+</ion-view>

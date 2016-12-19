@@ -69,12 +69,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
     }
   })
 
-  .state('app.playlists', {
-    url: '/playlists',
+  .state('app.addProjet', {
+    url: '/addProjet',
     views: {
       'menuContent': {
-        templateUrl: 'templates/playlists.html',
-        controller: 'PlaylistsCtrl'
+        templateUrl: 'templates/addProjet.html',
+        controller: 'AddProjetCtrl'
       }
     }
   })

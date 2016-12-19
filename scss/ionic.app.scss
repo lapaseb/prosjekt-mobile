@@ -28,4 +28,9 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "../scss/fonts.scss";
 
 //Importations des style pour les différentes pages
+@import "../scss/style.scss";
+@import "../scss/sideMenu.scss";
 @import "../scss/login.scss";
+@import "../scss/projets.scss";
+@import "../scss/addProjet.scss";
+

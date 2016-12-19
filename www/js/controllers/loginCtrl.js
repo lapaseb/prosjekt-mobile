@@ -2,14 +2,12 @@ angular.module('starter.controllers')
 .controller('LoginCtrl', function($scope, $rootScope, $firebase, $state) {
 
 	
-
 	firebase.auth().onAuthStateChanged(function(user) {
 		console.log(user);
 		if (user){
 			$state.go("app.projets");
 		}
 	});
-
 
 	$scope.SignIn = function(e){
 		//e.preventDefault();

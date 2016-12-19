@@ -1,0 +1,57 @@
+#projetsPage{
+  ion-content{
+    background-color: #eeeeee;
+  }
+
+  .card{
+    padding: 10px;
+
+    .cardTitle{
+      font-family: 'RobotoBold';
+      font-size: 1.3em;
+      margin-bottom: 25px;
+      width:87%;
+      padding-top:10px;
+    }
+    .cardFav{
+      position: absolute;
+      top:10px;
+      right:15px;
+      width:10%;
+      text-align:center;
+
+      i{
+        font-size: 2.9em;
+        color: #50c878;
+      }
+    }
+    .cardContent{
+      text-align: center;
+
+      span{
+        font-weight: 700;
+      }
+      .progress {
+        height: 10px;
+        border-radius: 10px;
+        background-color: #c5c5c5;
+
+        .determinate{
+          background-color: #50c878;
+        }
+
+        .redBar{
+          background-color: #c94f64;
+        }
+      }
+    }
+  }
+
+  #addButton{
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    z-index:10;
+  }
+
+}

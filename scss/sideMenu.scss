@@ -1,0 +1,22 @@
+#sideMenu{
+	
+	ion-side-menu ion-content .scroll{
+		height:100%;
+	}
+	#listMenu{
+		
+		.list{
+			height: 100%;
+
+			ion-item i{
+				color: #5f5f5f;
+			}
+		}
+
+		#disconnect{
+		    bottom: 0;
+    		position: absolute;
+    		width:100%;
+		}
+	}
+}
