@@ -7,17 +7,17 @@
 
     input[type=password]:focus:not([readonly]),
     input[type=email]:focus:not([readonly]){
-      border-bottom: 1px solid #50c878;
-      box-shadow: 0 1px 0 0 #50c878;
+      border-bottom: 1px solid $positive;
+      box-shadow: 0 1px 0 0 $positive;
     }
 
     input[type=password]:focus:not([readonly]) + label,
     input[type=email]:focus:not([readonly]) + label{
-      color: #50c878;
+      color: $positive;
     }
 
     #ajout{
-      background-color: #50c878;
+      background-color: $positive;
     }
   }
 

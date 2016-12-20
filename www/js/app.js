@@ -41,6 +41,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
       });
     }
 
+/*
+    $rootScope.openPage = function(url) {
+      $state.go(url);
+    }
+*/
   });
 })
 
@@ -65,6 +70,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
       'menuContent': {
         templateUrl: 'templates/projets.html',
         controller: 'ProjetsCtrl'
+      }
+    }
+  })
+
+  .state('app.singleProjet', {
+    url: '/projets/:projetId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/single-projet.html',
+        controller: 'SingleProjetCtrl'
       }
     }
   })

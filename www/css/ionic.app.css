@@ -9826,6 +9826,18 @@ body, h1, h2, h3, h4, h5, h6, .tab-item, input, button, select, textarea {
   font-weight: normal;
   font-style: normal; }
 
+h2 {
+  font-family: 'RobotoBold' !important;
+  font-size: 1.3em !important; }
+
+h3 {
+  font-family: 'RobotoBold' !important;
+  font-size: 1.2em !important; }
+
+h4 {
+  font-family: 'RobotoBold' !important;
+  font-size: 1em !important; }
+
 @font-face {
   font-family: 'RobotoBold';
   src: url("../data/fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../data/fonts/Roboto-Bold.ttf") format("truetype");
@@ -9861,6 +9873,51 @@ body, h1, h2, h3, h4, h5, h6, .tab-item, input, button, select, textarea {
 
 .loading-container .loading {
   background: none; }
+
+.positive {
+  background-color: #50c878 !important; }
+
+.addButtonBottomRight {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 10; }
+
+.card {
+  padding: 10px;
+  cursor: pointer; }
+  .card .cardTitle {
+    font-family: 'RobotoBold';
+    font-size: 1.3em;
+    margin-bottom: 25px;
+    width: 87%;
+    padding-top: 10px; }
+  .card .cardFav {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 10%;
+    text-align: center; }
+    .card .cardFav i {
+      font-size: 2.9em;
+      color: #50c878; }
+  .card .progress {
+    height: 10px;
+    border-radius: 10px;
+    background-color: #c5c5c5;
+    margin-bottom: 40px; }
+    .card .progress .determinate {
+      background-color: #50c878; }
+    .card .progress .redBar {
+      background-color: #c94f64; }
+  .card .card {
+    background-color: #50c878;
+    color: white;
+    text-align: left; }
+    .card .card h3 {
+      color: white; }
+    .card .card label {
+      color: white; }
 
 #sideMenu ion-side-menu ion-content .scroll {
   height: 100%; }
@@ -9912,42 +9969,6 @@ body, h1, h2, h3, h4, h5, h6, .tab-item, input, button, select, textarea {
 #projetsPage ion-content {
   background-color: #eeeeee; }
 
-#projetsPage .card {
-  padding: 10px; }
-  #projetsPage .card .cardTitle {
-    font-family: 'RobotoBold';
-    font-size: 1.3em;
-    margin-bottom: 25px;
-    width: 87%;
-    padding-top: 10px; }
-  #projetsPage .card .cardFav {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    width: 10%;
-    text-align: center; }
-    #projetsPage .card .cardFav i {
-      font-size: 2.9em;
-      color: #50c878; }
-  #projetsPage .card .cardContent {
-    text-align: center; }
-    #projetsPage .card .cardContent span {
-      font-weight: 700; }
-    #projetsPage .card .cardContent .progress {
-      height: 10px;
-      border-radius: 10px;
-      background-color: #c5c5c5; }
-      #projetsPage .card .cardContent .progress .determinate {
-        background-color: #50c878; }
-      #projetsPage .card .cardContent .progress .redBar {
-        background-color: #c94f64; }
-
-#projetsPage #addButton {
-  position: fixed;
-  bottom: 16px;
-  right: 16px;
-  z-index: 10; }
-
 #addProjetPage form input[type=password]:focus:not([readonly]),
 #addProjetPage form input[type=email]:focus:not([readonly]) {
   border-bottom: 1px solid #50c878;
@@ -9959,3 +9980,6 @@ body, h1, h2, h3, h4, h5, h6, .tab-item, input, button, select, textarea {
 
 #addProjetPage form #ajout {
   background-color: #50c878; }
+
+#singleProjetPage ion-content {
+  background-color: #eeeeee; }

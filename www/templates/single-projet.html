@@ -1,0 +1,39 @@
+<ion-view view-title="Projet" id="singleProjetPage">
+  <ion-content class="padding">
+
+	<div class="card" ng-repeat="MainTodo in MainTodos">
+
+		<div class="cardTitle">
+			<h3>{{ MainTodo.nomTachePrincipale }}</h3>
+		</div>
+	
+		<div class="cardContent">
+			<p>{{ MainTodo.descriptionTachePrincipale }}</p>
+		</div>
+
+	  	<center>{{ MainTodo.progression }}%</center>
+	    <div class="progress">
+	      <div class="determinate" ng-class="projet.progression <= 30 ? 'redBar' : ''" style="width:{{ MainTodo.progression }}%"></div>
+	    </div>
+
+	    <div class="card" ng-repeat="subTodo in MainTodo.tachesSecondaire">
+	    	<h3>{{subTodo.nomTacheSecondaire}}</h3>
+	    	<div class="switch">
+	            <label>
+	          		En cours
+	              	<input type="checkbox" ng-checked="{{SubTodo.isOver}}">
+	             	<span class="lever"  ng-click="setTodoState(MainTodo.$id, key)"></span>
+	              	Terminée
+	            </label>
+        	</div>
+	    </div>
+
+	    <a class="btn-floating btn-large waves-effect waves-light positive" href="#/app/addProjet"><i class="material-icons">add</i></a>
+
+	  
+	</div>
+
+  </ion-content>
+
+  <a class="addButtonBottomRight btn-floating btn-large waves-effect waves-light positive" href="#/app/addProjet"><i class="material-icons">add</i></a>
+</ion-view>
