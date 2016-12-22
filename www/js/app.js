@@ -8,15 +8,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
 
 .run(function($ionicPlatform, $state, $rootScope, $firebase, $firebaseArray) {
   // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyCUXqWjNke7q57mx_PZb0YInZbfN-fs5K0",
-      authDomain: "prosjekt-12423.firebaseapp.com",
-      databaseURL: "https://prosjekt-12423.firebaseio.com",
-      storageBucket: "prosjekt-12423.appspot.com",
-      messagingSenderId: "1020673117185"
-    };
-    firebase.initializeApp(config);
-
+  var config = {
+    apiKey: "AIzaSyCUXqWjNke7q57mx_PZb0YInZbfN-fs5K0",
+    authDomain: "prosjekt-12423.firebaseapp.com",
+    databaseURL: "https://prosjekt-12423.firebaseio.com",
+    storageBucket: "prosjekt-12423.appspot.com",
+    messagingSenderId: "1020673117185"
+  };
+  firebase.initializeApp(config);
 
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -92,17 +91,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
         controller: 'AddProjetCtrl'
       }
     }
-  })
-
-  .state('app.single', {
-    url: '/playlists/:playlistId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
-      }
-    }
   });
+  
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/login');
 });
