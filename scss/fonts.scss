@@ -12,6 +12,7 @@ body, h1, h2, h3, h4, h5, h6, .tab-item, input, button, select, textarea {
   font-family: 'RobotoRegular' !important;
   font-weight: normal;
   font-style: normal;
+  -webkit-font-smoothing: antialiased;
 }
 
 h2{

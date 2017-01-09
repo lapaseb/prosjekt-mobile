@@ -1,7 +1,7 @@
 <ion-view view-title="Projets" id="projetsPage">
   <ion-content class="padding">
 
-	<div class="card" ng-repeat="projet in projets" ng-click="goToProjet('{{ projet.$id }}')">
+	<div class="card" ng-repeat="(key, projet) in projets" ng-click="goToProjet('{{ key }}')">
 		<div class="cardTitle">
 			<h3>{{ projet.projetNom }}</h3>
 		</div>
@@ -22,5 +22,5 @@
 
   </ion-content>
 
-  <a class="addButtonBottomRight btn-floating btn-large waves-effect waves-light positive" href="#/app/addProjet"><i class="material-icons">add</i></a>
+  <a class="btn-floating btn-large waves-effect waves-light addButtonBottomRight complement" href="#/app/addProjet"><i class="material-icons">add</i></a>
 </ion-view>

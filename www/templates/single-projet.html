@@ -16,24 +16,30 @@
 	      <div class="determinate" ng-class="projet.progression <= 30 ? 'redBar' : ''" style="width:{{ MainTodo.progression }}%"></div>
 	    </div>
 
-	    <div class="card" ng-repeat="subTodo in MainTodo.tachesSecondaire">
-	    	<h3>{{subTodo.nomTacheSecondaire}}</h3>
-	    	<div class="switch">
+	    <div class="card valign-wrapper" ng-repeat="(key, subTodo) in MainTodo.tachesSecondaire">
+	    	<h3 class="valign">{{subTodo.nomTacheSecondaire}}</h3>
+	    	<div class="switch valign right-align">
+	    		<!--
 	            <label>
 	          		En cours
 	              	<input type="checkbox" ng-checked="{{SubTodo.isOver}}">
 	             	<span class="lever"  ng-click="setTodoState(MainTodo.$id, key)"></span>
 	              	Terminée
 	            </label>
+				-->
+
+	            <input type="checkbox" class="filled-in" id="filled-in-box-{{key}}" checked="checked" />
+      			<label for="filled-in-box-{{key}}"></label>
         	</div>
 	    </div>
+	    <center>
+	    	<a class="waves-effect waves-light btn complement" ng-click="addSubTodo()">Ajouter une tâche</a>
+	    </center>
 
-	    <a class="btn-floating btn-large waves-effect waves-light positive" href="#/app/addProjet"><i class="material-icons">add</i></a>
-
-	  
 	</div>
 
   </ion-content>
 
-  <a class="addButtonBottomRight btn-floating btn-large waves-effect waves-light positive" href="#/app/addProjet"><i class="material-icons">add</i></a>
+  <a class="btn-floating btn-large waves-effect waves-light addButtonBottomRight complement" href="#/app/addTodo"><i class="material-icons">add</i></a>
+
 </ion-view>

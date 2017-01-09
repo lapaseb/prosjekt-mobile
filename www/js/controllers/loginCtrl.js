@@ -3,7 +3,6 @@ angular.module('starter.controllers')
 
 	
 	firebase.auth().onAuthStateChanged(function(user) {
-		console.log(user);
 		if (user){
 			$state.go("app.projets");
 		}

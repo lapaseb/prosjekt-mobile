@@ -1,18 +1,42 @@
+/* Style du spinner de chargement */
 .loading-container .loading{
 	background:none;
+}
+
+/* Style de la popup */
+.popup-container{
+  background: rgba(0, 0, 0, 0.5);
+
+  .popup{
+    width: 80%;
+    background-color: #fafafa;
+    border-radius: 2px;
+  }
+
+  .popup-head {
+    padding-top: 26px;
+    padding-bottom: 0px;
+    border: none;
+    text-align: center;
+  }
 }
 
 .positive{
 	background-color: $positive !important;
 }
-
-.addButtonBottomRight{
-    position: fixed;
-    bottom: 16px;
-    right: 16px;
-    z-index:10;
+.complement{
+  background-color: $complement !important;
 }
 
+/* Style des boutons ajouter (en bas à droite) */
+.addButtonBottomRight{
+  position: fixed !important;
+  bottom: 16px;
+  right: 16px;
+  z-index:10 !important;
+}
+
+/* Style des cards */
 .card{
   padding: 10px;
   cursor: pointer;
@@ -48,7 +72,7 @@
     }
 
     .redBar{
-      background-color: #c94f64;
+      background-color: $complement;
     }
   }
 
@@ -59,10 +83,36 @@
 
     h3{
       color: white;
+      width:90%;
     }
   	label{
   		color: white;
   	}
+
+    .switch{
+      width:20%;
+    }
+    
+    [type="checkbox"].filled-in:not(:checked)+label:after{
+      background-color: white;
+      border-color: white;;
+    }
+
+    [type="checkbox"].filled-in+label:after{
+      width:30px;
+      height:30px;
+      border-radius:100%;
+    }
+    [type="checkbox"].filled-in:checked+label:after{
+      background-color:white;
+      border-color: white;
+    }
+    [type="checkbox"].filled-in:checked+label:before{
+      width: 12px;
+      height: 21px;
+      border-right: 3px solid $positive;
+      border-bottom: 3px solid $positive;
+    }
   }
   
 }
